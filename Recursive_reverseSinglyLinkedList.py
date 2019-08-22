@@ -13,13 +13,13 @@ class Solution(object):
         if not head or head.next==None:
             return head
         #Reverse the rest of the list not including node
-        reversing_everything_else=self.reverseList(head.next)
+        reverselist_head=self.reverseList(head.next)
         #Use this reversed end of the list and add the current node
         
         # The node after reversed list should the current node
         head.next.next=head
         
         head.next=None
-        return reversing_everything_else
+        return reverselist_head
         
     
